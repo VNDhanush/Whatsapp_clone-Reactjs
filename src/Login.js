@@ -2,14 +2,14 @@ import React from 'react'
 import "./Login.css";
 import { Button } from "@material-ui/core";
 import { auth, provider } from "./firebase";
-import {useStateValue} from "./StateProvider";
+import { useStateValue } from "./StateProvider";
 import { actionTypes } from "./reducer";
 
 function Login() {
+    //left empty to take it from the login page .
     const [{ }, dispatch] = useStateValue();
     const signIn = () => {
-        auth
-            .signInWithPopup(provider)
+        auth.signInWithPopup(provider)
             .then((result) => {
                 dispatch({
                     type: actionTypes.SET_USER,
@@ -22,7 +22,7 @@ function Login() {
         <div className="login">
             <div className="login__container">
                 <img
-                    src="https://upload.wikimedia.org/wikipedia"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/765px-WhatsApp.svg.png"
                     alt=""
                 />
                 <div className="login__test">
@@ -31,7 +31,7 @@ function Login() {
                     </h1>
                 </div>
 
-                <Button onClick={signIn}>
+                <Button type="submit" onClick={signIn}>
                     Sign In With Google
                 </Button>
             </div>

@@ -35,13 +35,6 @@
     margin-bottom: 30px;
 }
 
-.chat__name {
-    position: absolute;
-    top: -15px;
-    font-weight: 800;
-    font-size: xx-small;
-}
-
 .chat__reciever {
     margin-left: auto;
     background-color: #dcf8c6;
@@ -49,6 +42,13 @@
 
 .chat__timestamp {
     margin-left: 10px;
+    font-size: xx-small;
+}
+
+.chat__name {
+    position: absolute;
+    top: -15px;
+    font-weight: 800;
     font-size: xx-small;
 }
 
@@ -64,7 +64,8 @@
     background-repeat: repeat;
     background-position: center;
     padding: 30px;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .chat__footer {
@@ -72,7 +73,7 @@
     justify-content: space-between;
     align-items: center;
     height: 62px;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid lightgrey;
 }
 
 .chat__footer>form {
